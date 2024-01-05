@@ -9,6 +9,6 @@ let percentage = '33'
 let fullPrice = '450'
 
 
-let responsive = new Boolean(true);
+let responsive = true;
 
 
