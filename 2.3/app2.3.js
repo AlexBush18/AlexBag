@@ -1,18 +1,14 @@
-const titleProject = 'Оценка стоимости'
-console.log('Название проекта', titleProject)
+let titleProject = 'Оценка стоимости'
 
-const screensValue = 'Типы экранов'
-console.log('шаблонные, с уникальным дизайном, с анимациями', screensValue)
+let screensValue = 'шаблонные, с уникальным дизайном, с анимациями'
 
-const screenPrice = '58'
-console.log('Цена одного экрана', screenPrice)
+let screenPrice = '58'
 
-const percentage = '33'
-console.log('откат подрядчику', percentage)
+let percentage = '33'
 
-const fullPrice = '450'
-console.log('сумма заработка', fullPrice)
+let fullPrice = '450'
 
-const responsive = new Boolean(true);
+
+let responsive = new Boolean(true);
 
 
