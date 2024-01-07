@@ -10,7 +10,6 @@
 
 // let responsive = true;
 
-alert('Привет')
 
 let titleProject = prompt('Название проекта?');
 
