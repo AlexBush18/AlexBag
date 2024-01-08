@@ -28,8 +28,8 @@ let screenPrice = 458;
 let fullPrice = screenPrice + servicePrice1 + servicePrice2;
 
 
-let partnerCommission = 0.13;
-let servicePercentPrice = Math.round(fullPrice * partnerCommission);
+var partnerCommission = 0.1;
+var servicePercentPrice = Math.round(fullPrice - (fullPrice * partnerCommission));
 
 console.log('Тоговая стоимость проекта после комиссии') + servicePercentPrice;
 
