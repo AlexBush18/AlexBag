@@ -1,42 +1,42 @@
-// let titleProject = prompt('Название проекта?');
+let titleProject = prompt('Название проекта?');
 
-// let screensValue = prompt('шаблонные, с уникальным дизайном, с анимациями');
-
-
-// let responsive = confirm("Нужен ли респонсивный сайт?");
-
-// let service1 = prompt ('Какой сервис нужен ?')
-// let servicePrice1 = parseFloat(prompt("Сколько это будет стоить?"));
-
-// let service2 = prompt ('Какой еще сервис тебе нужен?');
-// let servicePrice2 = parseFloat(prompt("Сколько будет стоить этот второй сервис?"));
-
-// let screenPrice = 458;
-// let fullPrice = screenPrice + servicePrice1 + servicePrice2;
+let screensValue = prompt('шаблонные, с уникальным дизайном, с анимациями');
 
 
-// var partnerCommission = 0.1;
-// var servicePercentPrice = Math.round(fullPrice - (fullPrice * partnerCommission));
+let responsive = confirm("Нужен ли респонсивный сайт?");
 
-// console.log('Тоговая стоимость проекта после комиссии') + servicePercentPrice;
+let service1 = prompt ('Какой сервис нужен ?')
+let servicePrice1 = parseFloat(prompt("Сколько это будет стоить?"));
 
-/////////////////////////////////////////////////////////////
+let service2 = prompt ('Какой еще сервис тебе нужен?');
+let servicePrice2 = parseFloat(prompt("Сколько будет стоить этот второй сервис?"));
+
+let screenPrice = 458;
+let fullPrice = screenPrice + servicePrice1 + servicePrice2;
+
+
+var partnerCommission = 0.1;
+var servicePercentPrice = Math.round(fullPrice - (fullPrice * partnerCommission));
+
+console.log('Тоговая стоимость проекта после комиссии') + servicePercentPrice;
+
+///////////////////////////////////////////////////////////
 
 
 let getAllServicePrices = function() {
-  return service1 + service2;
+  return service1 + service2
 }
 
-let allServicePrices = getAllServicePrices();
+allServicePrices = getAllServicePrices();
 
 
 
 function getFullPrice() {
-  return screenPrice + allServicePrices;
+  return screenPrice + allServicePrices
 
 }
 
-let fullPrice = getFullPrice();
+fullPrice = getFullPrice();
 
 
 
@@ -45,14 +45,14 @@ function getTitle() {
   
 }
 
-let modifidTitle = getTitle();
+modifidTitle = getTitle();
 
 
 function getServicePercentPrices() {
-return Math.round(fullPrice - (fullPrice * servicePercent));
+return fullPrice - servicePercentPrice;
 }
 
-let servicePercentPrice = getServicePercentPrices();
+servicePercentPrice = getServicePercentPrices();
 
 
 
