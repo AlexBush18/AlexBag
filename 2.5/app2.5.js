@@ -18,13 +18,13 @@ let fullPrice = screenPrice + servicePrice1 + servicePrice2;
 var partnerCommission = 0.1;
 var servicePercentPrice = Math.round(fullPrice - (fullPrice * partnerCommission));
 
-console.log('Тоговая стоимость проекта после комиссии') + servicePercentPrice;
+console.log('Итоговая стоимость проекта после комиссии: ' + servicePercentPrice);
 
 ///////////////////////////////////////////////////////////
 
 
 let getAllServicePrices = function() {
-  return service1 + service2
+  return servicePrice1 + servicePrice2
 }
 
 allServicePrices = getAllServicePrices();
@@ -56,10 +56,14 @@ servicePercentPrice = getServicePercentPrices();
 
 
 
-console.log(modifiedTitle);
+console.log(modifidTitle);
 console.log(screensValue);
 console.log(getRollbackMessage(fullPrice));
 console.log(servicePercentPrice);
+
+
+
+///////////////////////////////////////////////////////////////////
 
 
 function getRollbackMessage(price) {
@@ -67,15 +71,18 @@ function getRollbackMessage(price) {
       return "Сделаем скидку 10%";
   } else if (price > 20000 && price < 40000) {
       return "Сделаем скидку 5%";
+  } else if (price > 40000 && price < 50000) { // Этого диапазона не было в задании, поэтому я его не вписывал 
+      return "Сделаем скидку 5%";
   } else if (price < 20000 && price > 0) {
       return "Скидка не предусмотрена";
   } else if (price <= 0) {
       return "Что-то пошло не так";
-  } else {
-      // Если price равно 0, 20000 или 50000
-      return "Текст по желанию";
+  } else if (fullPrice === 0 || fullPrice === 20000 || fullPrice === 50000) {
+      return "Проверка на строгое равенство";
   } 
 }
 
 
-
+function showTypeOf(fullPrice) {
+  console.log(typeof fullPrice);
+}
