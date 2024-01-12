@@ -15,8 +15,8 @@ let screenPrice = 458;
 let fullPrice = screenPrice + servicePrice1 + servicePrice2;
 
 
-var partnerCommission = 0.1;
-var servicePercentPrice = Math.round(fullPrice - (fullPrice * partnerCommission));
+let partnerCommission = 0.1;
+let servicePercentPrice = Math.round(fullPrice - (fullPrice * partnerCommission));
 
 console.log('Итоговая стоимость проекта после комиссии: ' + servicePercentPrice);
 
@@ -49,10 +49,16 @@ modifidTitle = getTitle();
 
 
 function getServicePercentPrices() {
-return fullPrice - servicePercentPrice;
+return Math.round(fullPrice - (fullPrice * partnerCommission));
 }
 
 servicePercentPrice = getServicePercentPrices();
+
+// function getServicePercentPrices() {
+//   return fullPrice - servicePercentPrice;
+//   }
+  
+//   servicePercentPrice = getServicePercentPrices();
 
 
 
@@ -77,7 +83,7 @@ function getRollbackMessage(price) {
       return "Скидка не предусмотрена";
   } else if (price <= 0) {
       return "Что-то пошло не так";
-  } else if (fullPrice === 0 || fullPrice === 20000 || fullPrice === 50000) {
+  } else if (price === 0 || price === 20000 || price === 50000) {
       return "Проверка на строгое равенство";
   } 
 }
@@ -86,3 +92,5 @@ function getRollbackMessage(price) {
 function showTypeOf(fullPrice) {
   console.log(typeof fullPrice);
 }
+
+fullPrice = showTypeOf();
