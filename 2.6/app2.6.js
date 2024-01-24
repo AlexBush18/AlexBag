@@ -110,31 +110,11 @@
 
 
 
-
-// function numberCheckin(number) {
-
-//   if (!isNaN (number) && isFinite (number)) {  ///////////   2.6.1
-
-//     alert("Все ок !")
-//   } else {
-//     alert("Не туда!")
-//   }
-
-// }
-
-
-
-///////////////////////////////
-
-
-
-
-
 // let screenPrice;
 
 // do {
 //   screenPrice = prompt("Введите цену страницы");
-//   if (screenPrice === null || screenPrice === "") {      / ///////////////////// 2.6.2
+//   if (screenPrice === null || screenPrice === "") {      
 //     break;
 //   }
 //   numberCheckin(parseFloat(screenPrice));
@@ -146,46 +126,55 @@
 ///////////////////////////////
 
 
-const getAllServicePrices = function() {
 
-  let sum = 0;
-  
-  
 
-  for(let i = 0; i < 2; i++) {
+function numberCheckin(number) {
 
-    let service1 = prompt ('Какой сервис нужен ?');       /////////////////////////////  2.6.3
-
-    let input = prompt("Сколько это стоит?");
-    let number = parseFloat(input);
-
-    
-
-    while(true) {
-      if (input === null || input === "") {
-        break;
-      }
-
-      if (isNaN(number)) {
-        alert("Сколько это будет стоить(число) ?");
-        input = prompt("Сколько это стоит?");
-        number = parseFloat(input);
-        continue;
-      } else {
-        break;
-      }
-    }
-
-    sum += number;
-  }
-
-    alert( "Сумма пользователя: " + sum );
+  return !isNaN(parseFloat(number)) && isFinite (number)
 
 }
 
 
+
+
+
+
   
 
+const getAllServicePrices = function() {
+
+    let sum = 0;
+    
+    
+  
+    for(let i = 0; i < 2; i++) {
+  
+      let service1 = prompt ('Какой сервис нужен ?');      
+  
+      let input = prompt("Сколько это стоит?");
+      let number = parseFloat(input);
+  
+      
+  
+      while(!numberCheckin(input) || input.trim() === "" || input === null) {
+        
+          input = prompt("Сколько это будет стоить ?");
+          number = parseFloat(input);
+        }
+  
+     
+  
+      sum += number;
+    }
+  
+      alert( "Сумма пользователя: " + sum );
+  
+  }
+  
+  getAllServicePrices();
+  
+  
+    
  
 
   
